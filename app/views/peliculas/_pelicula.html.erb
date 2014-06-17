@@ -1,0 +1,25 @@
+<div class="pelicula">
+	<figure>
+		<img class="poster">
+		<%= link_to image_tag(pelicula.imagen, width: 270, heigth:400), pelicula, titulo: pelicula.titulo %>
+		</img>
+	<figure>
+	<div id="caracteristicas">
+		<h1>
+			<%= pelicula.titulo %>
+		</h1>
+		<ul>
+			<li>
+				Año:
+				<%= pelicula.anio %>
+			</li>
+			<li>Genero:
+				<%= pelicula.tag_list %>
+			</li>
+			<li>
+				Actores:
+				<%= pelicula.actores %>
+			</li>
+		</ul>
+	</div>
+</div>

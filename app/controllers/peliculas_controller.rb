@@ -4,7 +4,16 @@ class PeliculasController < ApplicationController
   # GET /peliculas
   # GET /peliculas.json
   def index
-    @peliculas = Pelicula.all
+    peli= Pelicula.find(10)
+    hash = Hash.new
+    Pelicula.find_each do |p|
+      jaccard = Jaccard.coefficient(peli.tag_list,p.tag_list)
+      if jaccard > 0
+        hash[p] = jaccard;
+      end
+    end
+    
+    @peliculas = hash.keys.sort_by {|v| hash[v]}.reverse
   end
 
   # GET /peliculas/1

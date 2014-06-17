@@ -14,3 +14,14 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+//= require select2
+
+$(function(){
+
+	$("#pelicula_tag_list").select2({
+        tags:[
+        'comedia','ciencia ficcion','drama','espiritualidad','accion','aventura'
+        ]       
+    });
+
+});

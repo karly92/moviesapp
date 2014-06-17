@@ -1,35 +1,17 @@
-<h1>Listing peliculas</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Titulo</th>
-      <th>Anio</th>
-      <th>Genero</th>
-      <th>Actores</th>
-      <th>Imagen</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @peliculas.each do |pelicula| %>
-      <tr>
-        <td><%= pelicula.titulo %></td>
-        <td><%= pelicula.anio %></td>
-        <td><%= pelicula.tag_list %></td>
-        <td><%= pelicula.actores %></td>
-        <td><%= pelicula.imagen %></td>
-        <td><%= link_to 'Show', pelicula %></td>
-        <td><%= link_to 'Edit', edit_pelicula_path(pelicula) %></td>
-        <td><%= link_to 'Destroy', pelicula, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
+<nav class="navbar navbar-default" role="navigation">
+  <div class="navbar-header">
+    <a class="navbar-brand" href="#">Movies</a>
+  </div>
+  <ul class="nav navbar-nav navbar-right">
+    <li><a href="#">Buscar</a></li>
+    <li><%= link_to 'Agregar', new_pelicula_path %></li>
+    <li><a href="#">Soporte</a></li>
+  </ul>
+</nav>
+<div class="container">
+  <div id="items">
+    <%= render @peliculas %>
+  </div>
+</div>
 
 <%= link_to 'New Pelicula', new_pelicula_path %>
