@@ -35,6 +35,8 @@ gem 'carrierwave'
 
 gem 'jaccard', '~> 1.0.2'
 
+gem 'fast-stemmer'
+
 gem 'classifier', '~> 1.3.4' 
 
 group :doc do

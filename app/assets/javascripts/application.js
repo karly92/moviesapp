@@ -11,16 +11,19 @@
 // about supported directives.
 //
 //= require jquery
+//= require bootstrap
 //= require jquery_ujs
-//= require turbolinks
+
 //= require_tree .
 //= require select2
+//= require masonry
+//= require imagesloaded
+
 
 $(function(){
-
-	$("#pelicula_tag_list").select2({
+  $("#pelicula_tag_list").select2({
         tags:[
-        'comedia','ciencia ficcion','drama','espiritualidad','accion','aventura'
+        'comedia','ciencia ficcion','drama','espiritualidad','accion','aventura','infantil','horror','suspenso','romantica'
         ]       
     });
 

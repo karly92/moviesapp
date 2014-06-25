@@ -1,0 +1,14 @@
+  <div class="row">
+    <% @pregunta.each do |preguntum| %>
+      <div class="preguntas col-md-6">
+          <p><%= preguntum.contenido %><p>  
+      
+      </div>
+
+
+      <div class="preguntas col-md-6">
+          <p><%= preguntum.tipo %><p>  
+      
+      </div>
+    <% end %>
+  </div>

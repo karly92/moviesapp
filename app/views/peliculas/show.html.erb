@@ -1,29 +1,37 @@
-<p id="notice"><%= notice %></p>
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <nav class="navbar navbar-default" role="navigation">
+ 
+      <div class="navbar-header">
+      
 
-<p>
-  <strong>Titulo:</strong>
-  <%= @pelicula.titulo %>
-</p>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      
+        <a class="navbar-brand" href="#">Movies</a>
+      </div>
 
-<p>
-  <strong>Anio:</strong>
-  <%= @pelicula.anio %>
-</p>
-
-<p>
-  <strong>Genero:</strong>
-  <%= @pelicula.genero %>
-</p>
-
-<p>
-  <strong>Actores:</strong>
-  <%= @pelicula.actores %>
-</p>
-
-<p>
-  <strong>Imagen:</strong>
-  <%= @pelicula.imagen %>
-</p>
-
-<%= link_to 'Edit', edit_pelicula_path(@pelicula) %> |
-<%= link_to 'Back', peliculas_path %>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li><%= link_to 'Inicio',peliculas_path %></li>
+          <li><%= link_to 'Agregar',new_pelicula_path %></li>
+          <li><%= link_to 'Soporte',new_preguntum_path %></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+  <div id="container">
+    <div id="items">
+      <%= render @peliculas %>
+    </div>
+  </div>
+</body>
+</html>

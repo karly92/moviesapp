@@ -1,4 +1,6 @@
 Movies::Application.routes.draw do
+  resources :pregunta
+
   resources :peliculas
   root to: 'peliculas#index'
 

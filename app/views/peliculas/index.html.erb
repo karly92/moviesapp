@@ -1,17 +1,36 @@
-<nav class="navbar navbar-default" role="navigation">
-  <div class="navbar-header">
-    <a class="navbar-brand" href="#">Movies</a>
-  </div>
-  <ul class="nav navbar-nav navbar-right">
-    <li><a href="#">Buscar</a></li>
-    <li><%= link_to 'Agregar', new_pelicula_path %></li>
-    <li><a href="#">Soporte</a></li>
-  </ul>
-</nav>
-<div class="container">
-  <div id="items">
-    <%= render @peliculas %>
-  </div>
-</div>
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <nav class="navbar navbar-default" role="navigation">
+ 
+      <div class="navbar-header">
+      
 
-<%= link_to 'New Pelicula', new_pelicula_path %>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      
+        <a class="navbar-brand" href="#">Movies</a>
+      </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">Inicio</a></li>
+          <li><%= link_to 'Agregar',new_pelicula_path %></li>
+          <li><%= link_to 'Soporte',new_preguntum_path %></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </nav>
+    <div id="container">
+      <div id="items">
+        <%= render @peliculas %>
+      </div>
+    </div>
+</body>
+</html>
