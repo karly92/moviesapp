@@ -5,5 +5,7 @@ En la parte de Clasificadores Bayesianos clasifica Preguntas tecnicas y comercia
 
 Realizado por:
 Gómez Santos Gabriela
+
 López Ojeda Cristina
+
 Sánchez Camacho Karla Paola 
