@@ -4,6 +4,7 @@ En la parte de Jaccard encuentra las peliculas relacionadas respecto a su géner
 En la parte de Clasificadores Bayesianos clasifica Preguntas tecnicas y comerciales.
 
 Realizado por:
+
 Gómez Santos Gabriela
 
 López Ojeda Cristina
